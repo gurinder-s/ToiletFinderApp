@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */; };
+		CF78D29F2B8EA250000EBBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */; };
+		CF78D2A12B8EA250000EBBB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2A02B8EA250000EBBB8 /* ViewController.swift */; };
+		CF78D2A42B8EA250000EBBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A22B8EA250000EBBB8 /* Main.storyboard */; };
+		CF78D2A62B8EA251000EBBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A52B8EA251000EBBB8 /* Assets.xcassets */; };
+		CF78D2A92B8EA251000EBBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A72B8EA251000EBBB8 /* LaunchScreen.storyboard */; };
+		CF78D3252B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */; };
+		CF78D3262B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF78D3272B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */; };
+		CF78D3282B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF78D3292B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */; };
+		CF78D32A2B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CF78D32B2B8EA7E8000EBBB8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF78D32A2B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Embed Frameworks */,
+				CF78D3262B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Embed Frameworks */,
+				CF78D3282B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CF78D2992B8EA250000EBBB8 /* ToiletFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF78D2A02B8EA250000EBBB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF78D2A32B8EA250000EBBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF78D2A52B8EA251000EBBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF78D2A82B8EA251000EBBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF78D2AA2B8EA251000EBBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToilerFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF78D2962B8EA250000EBBB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF78D3292B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Frameworks */,
+				CF78D3252B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Frameworks */,
+				CF78D3272B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF78D2902B8EA250000EBBB8 = {
+			isa = PBXGroup;
+			children = (
+				CF78D29B2B8EA250000EBBB8 /* ToiletFinder */,
+				CF78D29A2B8EA250000EBBB8 /* Products */,
+				CF78D3212B8EA7DC000EBBB8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CF78D29A2B8EA250000EBBB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF78D2992B8EA250000EBBB8 /* ToiletFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF78D29B2B8EA250000EBBB8 /* ToiletFinder */ = {
+			isa = PBXGroup;
+			children = (
+				CF78D2B42B8EA3F2000EBBB8 /* Services */,
+				CF78D2B32B8EA3E4000EBBB8 /* Controllers */,
+				CF78D2B22B8EA3DD000EBBB8 /* ViewModels */,
+				CF78D2B12B8EA3D0000EBBB8 /* Views */,
+				CF78D2B02B8EA3C8000EBBB8 /* Models */,
+				CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */,
+				CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */,
+				CF78D2A02B8EA250000EBBB8 /* ViewController.swift */,
+				CF78D2A22B8EA250000EBBB8 /* Main.storyboard */,
+				CF78D2A52B8EA251000EBBB8 /* Assets.xcassets */,
+				CF78D2A72B8EA251000EBBB8 /* LaunchScreen.storyboard */,
+				CF78D2AA2B8EA251000EBBB8 /* Info.plist */,
+			);
+			path = ToiletFinder;
+			sourceTree = "<group>";
+		};
+		CF78D2B02B8EA3C8000EBBB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF78D2B12B8EA3D0000EBBB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF78D2B22B8EA3DD000EBBB8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF78D2B32B8EA3E4000EBBB8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF78D2B42B8EA3F2000EBBB8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF78D3212B8EA7DC000EBBB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */,
+				CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */,
+				CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF78D2982B8EA250000EBBB8 /* ToiletFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF78D2AD2B8EA251000EBBB8 /* Build configuration list for PBXNativeTarget "ToiletFinder" */;
+			buildPhases = (
+				CF78D2952B8EA250000EBBB8 /* Sources */,
+				CF78D2962B8EA250000EBBB8 /* Frameworks */,
+				CF78D2972B8EA250000EBBB8 /* Resources */,
+				CF78D32B2B8EA7E8000EBBB8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToiletFinder;
+			productName = ToiletFinder;
+			productReference = CF78D2992B8EA250000EBBB8 /* ToiletFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF78D2912B8EA250000EBBB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CF78D2982B8EA250000EBBB8 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CF78D2942B8EA250000EBBB8 /* Build configuration list for PBXProject "ToiletFinder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF78D2902B8EA250000EBBB8;
+			productRefGroup = CF78D29A2B8EA250000EBBB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF78D2982B8EA250000EBBB8 /* ToiletFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF78D2972B8EA250000EBBB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF78D2A92B8EA251000EBBB8 /* LaunchScreen.storyboard in Resources */,
+				CF78D2A62B8EA251000EBBB8 /* Assets.xcassets in Resources */,
+				CF78D2A42B8EA250000EBBB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF78D2952B8EA250000EBBB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF78D2A12B8EA250000EBBB8 /* ViewController.swift in Sources */,
+				CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */,
+				CF78D29F2B8EA250000EBBB8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF78D2A22B8EA250000EBBB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF78D2A32B8EA250000EBBB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF78D2A72B8EA251000EBBB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF78D2A82B8EA251000EBBB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF78D2AB2B8EA251000EBBB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF78D2AC2B8EA251000EBBB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF78D2AE2B8EA251000EBBB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletFinder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF78D2AF2B8EA251000EBBB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletFinder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF78D2942B8EA250000EBBB8 /* Build configuration list for PBXProject "ToiletFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF78D2AB2B8EA251000EBBB8 /* Debug */,
+				CF78D2AC2B8EA251000EBBB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF78D2AD2B8EA251000EBBB8 /* Build configuration list for PBXNativeTarget "ToiletFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF78D2AE2B8EA251000EBBB8 /* Debug */,
+				CF78D2AF2B8EA251000EBBB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF78D2912B8EA250000EBBB8 /* Project object */;
+}
