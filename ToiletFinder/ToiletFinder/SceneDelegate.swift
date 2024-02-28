@@ -13,11 +13,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+                window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+                window?.windowScene = windowScene
+                window?.rootViewController = createTabbar()
+                window?.makeKeyAndVisible()
+                configureNavigationBar()
     }
+    
+    func createTabbar() -> UITabBarController{
+        let tabbar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemBlue
+        tabbar.viewControllers = [createMapViewNavigationController(),createFavouritesNavigationController()]
+        return tabbar
+    }
+    
+    func createMapViewNavigationController() -> UINavigationController{
+        let viewController = ToiletMapViewController()
+        viewController.title = "Toilet Map"
+        //TODO: Change to a SF Symbol
+        viewController.tabBarItem = UITabBarItem(title: "Toilet Map", image: UIImage(systemName: "mappin.square.fill"), tag: 0)
+        return UINavigationController(rootViewController: viewController)
+    }
+    
+    func createFavouritesNavigationController() -> UINavigationController{
+        let viewController = FavouritesViewController()
+        viewController.title = "Favourites"
+        //TODO: Change to a SF Symbol
+        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        return UINavigationController(rootViewController: viewController)
+    }
+    func configureNavigationBar(){
+           UINavigationBar.appearance().tintColor = .systemBlue
+       }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
