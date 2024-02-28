@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1EBD552B8FC3CB008B5BBB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBD542B8FC3CB008B5BBB /* UserModel.swift */; };
 		CF78D2E82B8EA712000EBBB8 /* ToiletFinderDomain.docc in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2E72B8EA712000EBBB8 /* ToiletFinderDomain.docc */; };
 		CF78D2EE2B8EA712000EBBB8 /* ToiletFinderDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D2E32B8EA712000EBBB8 /* ToiletFinderDomain.framework */; };
 		CF78D2F32B8EA712000EBBB8 /* ToiletFinderDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2F22B8EA712000EBBB8 /* ToiletFinderDomainTests.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF1EBD542B8FC3CB008B5BBB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CF78D2E32B8EA712000EBBB8 /* ToiletFinderDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToiletFinderDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D2E62B8EA712000EBBB8 /* ToiletFinderDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToiletFinderDomain.h; sourceTree = "<group>"; };
 		CF78D2E72B8EA712000EBBB8 /* ToiletFinderDomain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderDomain.docc; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1EBD532B8FC3BA008B5BBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF1EBD542B8FC3CB008B5BBB /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CF78D2D92B8EA712000EBBB8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		CF78D2E52B8EA712000EBBB8 /* ToiletFinderDomain */ = {
 			isa = PBXGroup;
 			children = (
+				CF1EBD532B8FC3BA008B5BBB /* Models */,
 				CF78D2E62B8EA712000EBBB8 /* ToiletFinderDomain.h */,
 				CF78D2E72B8EA712000EBBB8 /* ToiletFinderDomain.docc */,
 			);
@@ -194,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1EBD552B8FC3CB008B5BBB /* UserModel.swift in Sources */,
 				CF78D2E82B8EA712000EBBB8 /* ToiletFinderDomain.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +417,7 @@
 		CF78D2FB2B8EA712000EBBB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -420,6 +433,7 @@
 		CF78D2FC2B8EA712000EBBB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

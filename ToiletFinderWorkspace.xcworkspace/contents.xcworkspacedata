@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:README.md">
+      location = "group:ToiletFinderServices/ToiletFinderServices.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ToilerFinderServices/ToilerFinderServices.xcodeproj">
+      location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:ToiletFinderDomain/ToiletFinderDomain.xcodeproj">

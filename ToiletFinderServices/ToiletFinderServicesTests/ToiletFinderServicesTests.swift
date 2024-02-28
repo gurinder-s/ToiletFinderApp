@@ -1,14 +1,14 @@
 //
-//  ToilerFinderServicesTests.swift
-//  ToilerFinderServicesTests
+//  ToiletFinderServicesTests.swift
+//  ToiletFinderServicesTests
 //
-//  Created by Gurinder Singh on 27/02/2024.
+//  Created by Gurinder Singh on 28/02/2024.
 //
 
 import XCTest
-@testable import ToilerFinderServices
+@testable import ToiletFinderServices
 
-final class ToilerFinderServicesTests: XCTestCase {
+final class ToiletFinderServicesTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -7,153 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF78D30C2B8EA763000EBBB8 /* ToilerFinderServices.docc in Sources */ = {isa = PBXBuildFile; fileRef = CF78D30B2B8EA763000EBBB8 /* ToilerFinderServices.docc */; };
-		CF78D3122B8EA764000EBBB8 /* ToilerFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3072B8EA763000EBBB8 /* ToilerFinderServices.framework */; };
-		CF78D3172B8EA764000EBBB8 /* ToilerFinderServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D3162B8EA764000EBBB8 /* ToilerFinderServicesTests.swift */; };
-		CF78D3182B8EA764000EBBB8 /* ToilerFinderServices.h in Headers */ = {isa = PBXBuildFile; fileRef = CF78D30A2B8EA763000EBBB8 /* ToilerFinderServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF1EBD892B8FCBCC008B5BBB /* ToiletFinderServices.docc in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBD882B8FCBCC008B5BBB /* ToiletFinderServices.docc */; };
+		CF1EBD8F2B8FCBCC008B5BBB /* ToiletFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */; };
+		CF1EBD942B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */; };
+		CF1EBD952B8FCBCC008B5BBB /* ToiletFinderServices.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1EBD872B8FCBCC008B5BBB /* ToiletFinderServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CF78D3132B8EA764000EBBB8 /* PBXContainerItemProxy */ = {
+		CF1EBD902B8FCBCC008B5BBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CF78D2FE2B8EA763000EBBB8 /* Project object */;
+			containerPortal = CF1EBD7B2B8FCBCC008B5BBB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF78D3062B8EA763000EBBB8;
-			remoteInfo = ToilerFinderServices;
+			remoteGlobalIDString = CF1EBD832B8FCBCC008B5BBB;
+			remoteInfo = ToiletFinderServices;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF78D3072B8EA763000EBBB8 /* ToilerFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToilerFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF78D30A2B8EA763000EBBB8 /* ToilerFinderServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToilerFinderServices.h; sourceTree = "<group>"; };
-		CF78D30B2B8EA763000EBBB8 /* ToilerFinderServices.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToilerFinderServices.docc; sourceTree = "<group>"; };
-		CF78D3112B8EA764000EBBB8 /* ToilerFinderServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToilerFinderServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF78D3162B8EA764000EBBB8 /* ToilerFinderServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToilerFinderServicesTests.swift; sourceTree = "<group>"; };
+		CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToiletFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1EBD872B8FCBCC008B5BBB /* ToiletFinderServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToiletFinderServices.h; sourceTree = "<group>"; };
+		CF1EBD882B8FCBCC008B5BBB /* ToiletFinderServices.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderServices.docc; sourceTree = "<group>"; };
+		CF1EBD8E2B8FCBCC008B5BBB /* ToiletFinderServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToiletFinderServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletFinderServicesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CF78D3042B8EA763000EBBB8 /* Frameworks */ = {
+		CF1EBD812B8FCBCC008B5BBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF78D30E2B8EA764000EBBB8 /* Frameworks */ = {
+		CF1EBD8B2B8FCBCC008B5BBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF78D3122B8EA764000EBBB8 /* ToilerFinderServices.framework in Frameworks */,
+				CF1EBD8F2B8FCBCC008B5BBB /* ToiletFinderServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF78D2FD2B8EA763000EBBB8 = {
+		CF1EBD7A2B8FCBCC008B5BBB = {
 			isa = PBXGroup;
 			children = (
-				CF78D3092B8EA763000EBBB8 /* ToilerFinderServices */,
-				CF78D3152B8EA764000EBBB8 /* ToilerFinderServicesTests */,
-				CF78D3082B8EA763000EBBB8 /* Products */,
+				CF1EBD862B8FCBCC008B5BBB /* ToiletFinderServices */,
+				CF1EBD922B8FCBCC008B5BBB /* ToiletFinderServicesTests */,
+				CF1EBD852B8FCBCC008B5BBB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CF78D3082B8EA763000EBBB8 /* Products */ = {
+		CF1EBD852B8FCBCC008B5BBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF78D3072B8EA763000EBBB8 /* ToilerFinderServices.framework */,
-				CF78D3112B8EA764000EBBB8 /* ToilerFinderServicesTests.xctest */,
+				CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */,
+				CF1EBD8E2B8FCBCC008B5BBB /* ToiletFinderServicesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF78D3092B8EA763000EBBB8 /* ToilerFinderServices */ = {
+		CF1EBD862B8FCBCC008B5BBB /* ToiletFinderServices */ = {
 			isa = PBXGroup;
 			children = (
-				CF78D30A2B8EA763000EBBB8 /* ToilerFinderServices.h */,
-				CF78D30B2B8EA763000EBBB8 /* ToilerFinderServices.docc */,
+				CF1EBD872B8FCBCC008B5BBB /* ToiletFinderServices.h */,
+				CF1EBD882B8FCBCC008B5BBB /* ToiletFinderServices.docc */,
 			);
-			path = ToilerFinderServices;
+			path = ToiletFinderServices;
 			sourceTree = "<group>";
 		};
-		CF78D3152B8EA764000EBBB8 /* ToilerFinderServicesTests */ = {
+		CF1EBD922B8FCBCC008B5BBB /* ToiletFinderServicesTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF78D3162B8EA764000EBBB8 /* ToilerFinderServicesTests.swift */,
+				CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */,
 			);
-			path = ToilerFinderServicesTests;
+			path = ToiletFinderServicesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CF78D3022B8EA763000EBBB8 /* Headers */ = {
+		CF1EBD7F2B8FCBCC008B5BBB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF78D3182B8EA764000EBBB8 /* ToilerFinderServices.h in Headers */,
+				CF1EBD952B8FCBCC008B5BBB /* ToiletFinderServices.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CF78D3062B8EA763000EBBB8 /* ToilerFinderServices */ = {
+		CF1EBD832B8FCBCC008B5BBB /* ToiletFinderServices */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF78D31B2B8EA764000EBBB8 /* Build configuration list for PBXNativeTarget "ToilerFinderServices" */;
+			buildConfigurationList = CF1EBD982B8FCBCC008B5BBB /* Build configuration list for PBXNativeTarget "ToiletFinderServices" */;
 			buildPhases = (
-				CF78D3022B8EA763000EBBB8 /* Headers */,
-				CF78D3032B8EA763000EBBB8 /* Sources */,
-				CF78D3042B8EA763000EBBB8 /* Frameworks */,
-				CF78D3052B8EA763000EBBB8 /* Resources */,
+				CF1EBD7F2B8FCBCC008B5BBB /* Headers */,
+				CF1EBD802B8FCBCC008B5BBB /* Sources */,
+				CF1EBD812B8FCBCC008B5BBB /* Frameworks */,
+				CF1EBD822B8FCBCC008B5BBB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ToilerFinderServices;
-			productName = ToilerFinderServices;
-			productReference = CF78D3072B8EA763000EBBB8 /* ToilerFinderServices.framework */;
+			name = ToiletFinderServices;
+			productName = ToiletFinderServices;
+			productReference = CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CF78D3102B8EA764000EBBB8 /* ToilerFinderServicesTests */ = {
+		CF1EBD8D2B8FCBCC008B5BBB /* ToiletFinderServicesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF78D31E2B8EA764000EBBB8 /* Build configuration list for PBXNativeTarget "ToilerFinderServicesTests" */;
+			buildConfigurationList = CF1EBD9B2B8FCBCC008B5BBB /* Build configuration list for PBXNativeTarget "ToiletFinderServicesTests" */;
 			buildPhases = (
-				CF78D30D2B8EA764000EBBB8 /* Sources */,
-				CF78D30E2B8EA764000EBBB8 /* Frameworks */,
-				CF78D30F2B8EA764000EBBB8 /* Resources */,
+				CF1EBD8A2B8FCBCC008B5BBB /* Sources */,
+				CF1EBD8B2B8FCBCC008B5BBB /* Frameworks */,
+				CF1EBD8C2B8FCBCC008B5BBB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CF78D3142B8EA764000EBBB8 /* PBXTargetDependency */,
+				CF1EBD912B8FCBCC008B5BBB /* PBXTargetDependency */,
 			);
-			name = ToilerFinderServicesTests;
-			productName = ToilerFinderServicesTests;
-			productReference = CF78D3112B8EA764000EBBB8 /* ToilerFinderServicesTests.xctest */;
+			name = ToiletFinderServicesTests;
+			productName = ToiletFinderServicesTests;
+			productReference = CF1EBD8E2B8FCBCC008B5BBB /* ToiletFinderServicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CF78D2FE2B8EA763000EBBB8 /* Project object */ = {
+		CF1EBD7B2B8FCBCC008B5BBB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					CF78D3062B8EA763000EBBB8 = {
+					CF1EBD832B8FCBCC008B5BBB = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					CF78D3102B8EA764000EBBB8 = {
+					CF1EBD8D2B8FCBCC008B5BBB = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = CF78D3012B8EA763000EBBB8 /* Build configuration list for PBXProject "ToilerFinderServices" */;
+			buildConfigurationList = CF1EBD7E2B8FCBCC008B5BBB /* Build configuration list for PBXProject "ToiletFinderServices" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,26 +161,26 @@
 				en,
 				Base,
 			);
-			mainGroup = CF78D2FD2B8EA763000EBBB8;
-			productRefGroup = CF78D3082B8EA763000EBBB8 /* Products */;
+			mainGroup = CF1EBD7A2B8FCBCC008B5BBB;
+			productRefGroup = CF1EBD852B8FCBCC008B5BBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF78D3062B8EA763000EBBB8 /* ToilerFinderServices */,
-				CF78D3102B8EA764000EBBB8 /* ToilerFinderServicesTests */,
+				CF1EBD832B8FCBCC008B5BBB /* ToiletFinderServices */,
+				CF1EBD8D2B8FCBCC008B5BBB /* ToiletFinderServicesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CF78D3052B8EA763000EBBB8 /* Resources */ = {
+		CF1EBD822B8FCBCC008B5BBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF78D30F2B8EA764000EBBB8 /* Resources */ = {
+		CF1EBD8C2B8FCBCC008B5BBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,34 +190,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CF78D3032B8EA763000EBBB8 /* Sources */ = {
+		CF1EBD802B8FCBCC008B5BBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF78D30C2B8EA763000EBBB8 /* ToilerFinderServices.docc in Sources */,
+				CF1EBD892B8FCBCC008B5BBB /* ToiletFinderServices.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF78D30D2B8EA764000EBBB8 /* Sources */ = {
+		CF1EBD8A2B8FCBCC008B5BBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF78D3172B8EA764000EBBB8 /* ToilerFinderServicesTests.swift in Sources */,
+				CF1EBD942B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CF78D3142B8EA764000EBBB8 /* PBXTargetDependency */ = {
+		CF1EBD912B8FCBCC008B5BBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF78D3062B8EA763000EBBB8 /* ToilerFinderServices */;
-			targetProxy = CF78D3132B8EA764000EBBB8 /* PBXContainerItemProxy */;
+			target = CF1EBD832B8FCBCC008B5BBB /* ToiletFinderServices */;
+			targetProxy = CF1EBD902B8FCBCC008B5BBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CF78D3192B8EA764000EBBB8 /* Debug */ = {
+		CF1EBD962B8FCBCC008B5BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,7 +283,7 @@
 			};
 			name = Debug;
 		};
-		CF78D31A2B8EA764000EBBB8 /* Release */ = {
+		CF1EBD972B8FCBCC008B5BBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -342,7 +342,7 @@
 			};
 			name = Release;
 		};
-		CF78D31C2B8EA764000EBBB8 /* Debug */ = {
+		CF1EBD992B8FCBCC008B5BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -363,7 +363,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToilerFinderServices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinderServices;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -372,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		CF78D31D2B8EA764000EBBB8 /* Release */ = {
+		CF1EBD9A2B8FCBCC008B5BBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -393,7 +393,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToilerFinderServices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinderServices;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -402,14 +402,14 @@
 			};
 			name = Release;
 		};
-		CF78D31F2B8EA764000EBBB8 /* Debug */ = {
+		CF1EBD9C2B8FCBCC008B5BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToilerFinderServicesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinderServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -417,14 +417,14 @@
 			};
 			name = Debug;
 		};
-		CF78D3202B8EA764000EBBB8 /* Release */ = {
+		CF1EBD9D2B8FCBCC008B5BBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToilerFinderServicesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurinder.ToiletFinderServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -435,34 +435,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF78D3012B8EA763000EBBB8 /* Build configuration list for PBXProject "ToilerFinderServices" */ = {
+		CF1EBD7E2B8FCBCC008B5BBB /* Build configuration list for PBXProject "ToiletFinderServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF78D3192B8EA764000EBBB8 /* Debug */,
-				CF78D31A2B8EA764000EBBB8 /* Release */,
+				CF1EBD962B8FCBCC008B5BBB /* Debug */,
+				CF1EBD972B8FCBCC008B5BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF78D31B2B8EA764000EBBB8 /* Build configuration list for PBXNativeTarget "ToilerFinderServices" */ = {
+		CF1EBD982B8FCBCC008B5BBB /* Build configuration list for PBXNativeTarget "ToiletFinderServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF78D31C2B8EA764000EBBB8 /* Debug */,
-				CF78D31D2B8EA764000EBBB8 /* Release */,
+				CF1EBD992B8FCBCC008B5BBB /* Debug */,
+				CF1EBD9A2B8FCBCC008B5BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF78D31E2B8EA764000EBBB8 /* Build configuration list for PBXNativeTarget "ToilerFinderServicesTests" */ = {
+		CF1EBD9B2B8FCBCC008B5BBB /* Build configuration list for PBXNativeTarget "ToiletFinderServicesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF78D31F2B8EA764000EBBB8 /* Debug */,
-				CF78D3202B8EA764000EBBB8 /* Release */,
+				CF1EBD9C2B8FCBCC008B5BBB /* Debug */,
+				CF1EBD9D2B8FCBCC008B5BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CF78D2FE2B8EA763000EBBB8 /* Project object */;
+	rootObject = CF1EBD7B2B8FCBCC008B5BBB /* Project object */;
 }

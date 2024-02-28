@@ -37,12 +37,12 @@
 		CF1EBD4E2B8FB938008B5BBB /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBD4D2B8FB938008B5BBB /* FirebaseRemoteConfigSwift */; };
 		CF1EBD502B8FB938008B5BBB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBD4F2B8FB938008B5BBB /* FirebaseStorage */; };
 		CF1EBD522B8FB938008B5BBB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBD512B8FB938008B5BBB /* FirebaseStorageCombine-Community */; };
+		CF1EBD9F2B8FCCD4008B5BBB /* ToiletFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */; };
+		CF1EBDA02B8FCCD4008B5BBB /* ToiletFinderServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */; };
 		CF78D29F2B8EA250000EBBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */; };
 		CF78D2A62B8EA251000EBBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A52B8EA251000EBBB8 /* Assets.xcassets */; };
 		CF78D2A92B8EA251000EBBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A72B8EA251000EBBB8 /* LaunchScreen.storyboard */; };
-		CF78D3252B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */; };
-		CF78D3262B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF78D3272B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */; };
 		CF78D3282B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF78D3292B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */; };
@@ -56,8 +56,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CF1EBDA02B8FCCD4008B5BBB /* ToiletFinderServices.framework in Embed Frameworks */,
 				CF78D32A2B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Embed Frameworks */,
-				CF78D3262B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Embed Frameworks */,
 				CF78D3282B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -69,6 +69,7 @@
 		CF1EBCDE2B8FA2CA008B5BBB /* ToiletMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
 		CF1EBCE02B8FA2E5008B5BBB /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		CF1EBCE32B8FB5A1008B5BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D2992B8EA250000EBBB8 /* ToiletFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +101,8 @@
 				CF1EBD4A2B8FB938008B5BBB /* FirebasePerformance in Frameworks */,
 				CF1EBD362B8FB938008B5BBB /* FirebaseFirestore in Frameworks */,
 				CF78D3292B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Frameworks */,
+				CF1EBD9F2B8FCCD4008B5BBB /* ToiletFinderServices.framework in Frameworks */,
 				CF1EBD402B8FB938008B5BBB /* FirebaseInAppMessaging-Beta in Frameworks */,
-				CF78D3252B8EA7E8000EBBB8 /* ToilerFinderServices.framework in Frameworks */,
 				CF1EBD202B8FB938008B5BBB /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				CF1EBD4E2B8FB938008B5BBB /* FirebaseRemoteConfigSwift in Frameworks */,
 				CF1EBD2C2B8FB938008B5BBB /* FirebaseAuthCombine-Community in Frameworks */,
@@ -188,6 +189,7 @@
 		CF78D3212B8EA7DC000EBBB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */,
 				CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */,
 				CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */,
 				CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */,
