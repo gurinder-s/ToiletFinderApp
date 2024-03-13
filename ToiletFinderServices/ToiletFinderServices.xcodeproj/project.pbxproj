@@ -11,6 +11,9 @@
 		CF1EBD8F2B8FCBCC008B5BBB /* ToiletFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */; };
 		CF1EBD942B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */; };
 		CF1EBD952B8FCBCC008B5BBB /* ToiletFinderServices.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1EBD872B8FCBCC008B5BBB /* ToiletFinderServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF1EBDA42B8FCF32008B5BBB /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */; };
+		CF1EBDA62B8FCF6B008B5BBB /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */; };
+		CF1EBDA92B8FD66D008B5BBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBDA82B8FD66D008B5BBB /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		CF1EBD882B8FCBCC008B5BBB /* ToiletFinderServices.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderServices.docc; sourceTree = "<group>"; };
 		CF1EBD8E2B8FCBCC008B5BBB /* ToiletFinderServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToiletFinderServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletFinderServicesTests.swift; sourceTree = "<group>"; };
+		CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1EBDA92B8FD66D008B5BBB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,7 @@
 		CF1EBD862B8FCBCC008B5BBB /* ToiletFinderServices */ = {
 			isa = PBXGroup;
 			children = (
+				CF1EBDA12B8FCEE2008B5BBB /* Services */,
 				CF1EBD872B8FCBCC008B5BBB /* ToiletFinderServices.h */,
 				CF1EBD882B8FCBCC008B5BBB /* ToiletFinderServices.docc */,
 			);
@@ -83,6 +90,23 @@
 				CF1EBD932B8FCBCC008B5BBB /* ToiletFinderServicesTests.swift */,
 			);
 			path = ToiletFinderServicesTests;
+			sourceTree = "<group>";
+		};
+		CF1EBDA12B8FCEE2008B5BBB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF1EBDA22B8FCF00008B5BBB /* UserService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF1EBDA22B8FCF00008B5BBB /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */,
+				CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */,
+			);
+			path = UserService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +137,9 @@
 			dependencies = (
 			);
 			name = ToiletFinderServices;
+			packageProductDependencies = (
+				CF1EBDA82B8FD66D008B5BBB /* FirebaseAuth */,
+			);
 			productName = ToiletFinderServices;
 			productReference = CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +189,9 @@
 				Base,
 			);
 			mainGroup = CF1EBD7A2B8FCBCC008B5BBB;
+			packageReferences = (
+				CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CF1EBD852B8FCBCC008B5BBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1EBDA62B8FCF6B008B5BBB /* FirebaseUserService.swift in Sources */,
+				CF1EBDA42B8FCF32008B5BBB /* UserServiceProtocol.swift in Sources */,
 				CF1EBD892B8FCBCC008B5BBB /* ToiletFinderServices.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +437,7 @@
 		CF1EBD9C2B8FCBCC008B5BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -420,6 +453,7 @@
 		CF1EBD9D2B8FCBCC008B5BBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -463,6 +497,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF1EBDA82B8FD66D008B5BBB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF1EBD7B2B8FCBCC008B5BBB /* Project object */;
 }

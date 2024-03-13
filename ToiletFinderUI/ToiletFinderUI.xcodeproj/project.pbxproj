@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF6125212BA0CC08007E6326 /* TFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125202BA0CC08007E6326 /* TFTitleLabel.swift */; };
 		CF78D2C42B8EA6E6000EBBB8 /* ToiletFinderUI.docc in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2C32B8EA6E6000EBBB8 /* ToiletFinderUI.docc */; };
 		CF78D2CA2B8EA6E6000EBBB8 /* ToiletFinderUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D2BF2B8EA6E6000EBBB8 /* ToiletFinderUI.framework */; };
 		CF78D2CF2B8EA6E6000EBBB8 /* ToiletFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2CE2B8EA6E6000EBBB8 /* ToiletFinderUITests.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF6125202BA0CC08007E6326 /* TFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTitleLabel.swift; sourceTree = "<group>"; };
 		CF78D2BF2B8EA6E6000EBBB8 /* ToiletFinderUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToiletFinderUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D2C22B8EA6E6000EBBB8 /* ToiletFinderUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToiletFinderUI.h; sourceTree = "<group>"; };
 		CF78D2C32B8EA6E6000EBBB8 /* ToiletFinderUI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderUI.docc; sourceTree = "<group>"; };
@@ -50,6 +52,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF61251F2BA0CBC0007E6326 /* UILabels */ = {
+			isa = PBXGroup;
+			children = (
+				CF6125202BA0CC08007E6326 /* TFTitleLabel.swift */,
+			);
+			path = UILabels;
+			sourceTree = "<group>";
+		};
+		CF6125222BA0D337007E6326 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		CF78D2B52B8EA6E6000EBBB8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +88,8 @@
 		CF78D2C12B8EA6E6000EBBB8 /* ToiletFinderUI */ = {
 			isa = PBXGroup;
 			children = (
+				CF6125222BA0D337007E6326 /* TextFields */,
+				CF61251F2BA0CBC0007E6326 /* UILabels */,
 				CF78D2C22B8EA6E6000EBBB8 /* ToiletFinderUI.h */,
 				CF78D2C32B8EA6E6000EBBB8 /* ToiletFinderUI.docc */,
 			);
@@ -195,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF78D2C42B8EA6E6000EBBB8 /* ToiletFinderUI.docc in Sources */,
+				CF6125212BA0CC08007E6326 /* TFTitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +425,7 @@
 		CF78D2D72B8EA6E6000EBBB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -420,6 +441,7 @@
 		CF78D2D82B8EA6E6000EBBB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
