@@ -8,5 +8,5 @@
 import Foundation
 import ToiletFinderDomain
 public protocol UserServiceProtocol{
-    func registerUser(withEmail email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void)
+     func registerUser(withEmail email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void)
 }

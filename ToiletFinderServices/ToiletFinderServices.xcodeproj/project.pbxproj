@@ -14,6 +14,8 @@
 		CF1EBDA42B8FCF32008B5BBB /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */; };
 		CF1EBDA62B8FCF6B008B5BBB /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */; };
 		CF1EBDA92B8FD66D008B5BBB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBDA82B8FD66D008B5BBB /* FirebaseAuth */; };
+		CF6125352BA254D0007E6326 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CF6125342BA254D0007E6326 /* FirebaseFirestore */; };
+		CF6125372BA254DA007E6326 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF6125362BA254DA007E6326 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1EBDA92B8FD66D008B5BBB /* FirebaseAuth in Frameworks */,
+				CF6125352BA254D0007E6326 /* FirebaseFirestore in Frameworks */,
+				CF6125372BA254DA007E6326 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				CF1EBD862B8FCBCC008B5BBB /* ToiletFinderServices */,
 				CF1EBD922B8FCBCC008B5BBB /* ToiletFinderServicesTests */,
 				CF1EBD852B8FCBCC008B5BBB /* Products */,
+				CF6125332BA254D0007E6326 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +114,13 @@
 			path = UserService;
 			sourceTree = "<group>";
 		};
+		CF6125332BA254D0007E6326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -139,6 +151,8 @@
 			name = ToiletFinderServices;
 			packageProductDependencies = (
 				CF1EBDA82B8FD66D008B5BBB /* FirebaseAuth */,
+				CF6125342BA254D0007E6326 /* FirebaseFirestore */,
+				CF6125362BA254DA007E6326 /* FirebaseFirestoreSwift */,
 			);
 			productName = ToiletFinderServices;
 			productReference = CF1EBD842B8FCBCC008B5BBB /* ToiletFinderServices.framework */;
@@ -514,6 +528,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		CF6125342BA254D0007E6326 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CF6125362BA254DA007E6326 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1EBDA72B8FD66D008B5BBB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

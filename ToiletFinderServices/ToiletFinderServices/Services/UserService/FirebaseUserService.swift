@@ -8,20 +8,48 @@
 import Foundation
 import ToiletFinderDomain
 import FirebaseAuth
-public class FirebaseUserService: UserServiceProtocol {
-    public init() {}    
-    public func registerUser(withEmail email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                completion(.failure(error))
+import FirebaseFirestore
+public class FirebaseUserService{
+    public static let shared = FirebaseUserService()
+    
+    public init() {}
+    
+    /// A method to register the user
+    /// - Parameters:
+    ///   - userRequest: The users information
+    ///   - completion: A completion with two values
+    ///   - Bool: was registered - determins if the user was registered and saved in the database correctly
+    ///   - Error: an optional error if firebase provides
+    public func registerUser(with userRequest: UserModel, completion: @escaping (Bool, Error?) -> Void){
+        let username = userRequest.username
+        let email = userRequest.email
+        let password = userRequest.password
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error{
+                completion(false,error)
                 return
             }
-            guard let user = authResult?.user else {
-                completion(.failure(NSError(domain: "UserService", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unknown error occurred"])))
+            
+            guard let resultUser = result?.user else{
+                 completion(false, nil)
                 return
             }
-            let userModel = UserModel(uid: user.uid, email: user.email, displayName: user.displayName)
-            completion(.success(userModel))
+            
+            let db = Firestore.firestore()
+            
+            db.collection("users")
+                .document(resultUser.uid)
+                .setData([
+                    "username": username,
+                    "email": email
+                ]) { error in
+                    if let error = error{
+                        completion(false,error)
+                        return
+                    }
+                    completion(true,nil)
+                }
+            
         }
     }
 }

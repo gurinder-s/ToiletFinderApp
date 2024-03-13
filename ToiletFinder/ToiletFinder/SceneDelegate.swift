@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Firebase
+import ToiletFinderServices
+import ToiletFinderDomain
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -28,6 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
                 window?.makeKeyAndVisible()
                 configureNavigationBar()
+        
+        let userRequest = UserModel.init(uid: <#T##String#>, email: <#T##String#>, displayName: <#T##String#>, username: <#T##String#>, password: <#T##String#>)
+        FirebaseUserService.shared.registerUser(with: <#T##UserModel#>, completion: <#T##(Bool, Error?) -> Void#>)
+        
     }
     
 public func createTabbar() -> UITabBarController{
