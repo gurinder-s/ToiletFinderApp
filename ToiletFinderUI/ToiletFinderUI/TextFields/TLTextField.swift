@@ -9,17 +9,17 @@ import UIKit
 
 public class TLTextField: UITextField {
 
-    enum TLTextFieldVariant{
+   public enum TLTextFieldVariant{
         case regular
         case username
         case email
         case password
     }
     
-    private let authFieldType: TLTextFieldVariant
+    private let fieldType: TLTextFieldVariant
     
-    init(authFieldType: TLTextFieldVariant) {
-        self.authFieldType = authFieldType
+    public init(fieldType: TLTextFieldVariant) {
+        self.fieldType = fieldType
         super.init(frame: .zero)
         
         self.backgroundColor = .secondarySystemBackground
@@ -27,6 +27,25 @@ public class TLTextField: UITextField {
         self.returnKeyType = .done
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
+        
+        self.leftViewMode = .always
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
+        
+        switch fieldType{
+        case .username:
+            self.placeholder = "Username"
+        case .email:
+            self.placeholder = "Email"
+            self.keyboardType = .emailAddress
+            self.textContentType = .emailAddress
+        case .password:
+            self.placeholder = "Password"
+            self.textContentType = .oneTimeCode
+            self.isSecureTextEntry = true
+        case .regular:
+            self.placeholder = ""
+        }
+        
     }
     
     required init?(coder: NSCoder) {
