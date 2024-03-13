@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF6125212BA0CC08007E6326 /* TFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125202BA0CC08007E6326 /* TFTitleLabel.swift */; };
+		CF61252C2BA2084B007E6326 /* TLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61252B2BA2084B007E6326 /* TLTextField.swift */; };
 		CF78D2C42B8EA6E6000EBBB8 /* ToiletFinderUI.docc in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2C32B8EA6E6000EBBB8 /* ToiletFinderUI.docc */; };
 		CF78D2CA2B8EA6E6000EBBB8 /* ToiletFinderUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D2BF2B8EA6E6000EBBB8 /* ToiletFinderUI.framework */; };
 		CF78D2CF2B8EA6E6000EBBB8 /* ToiletFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2CE2B8EA6E6000EBBB8 /* ToiletFinderUITests.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		CF6125202BA0CC08007E6326 /* TFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTitleLabel.swift; sourceTree = "<group>"; };
+		CF61252B2BA2084B007E6326 /* TLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLTextField.swift; sourceTree = "<group>"; };
 		CF78D2BF2B8EA6E6000EBBB8 /* ToiletFinderUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToiletFinderUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D2C22B8EA6E6000EBBB8 /* ToiletFinderUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToiletFinderUI.h; sourceTree = "<group>"; };
 		CF78D2C32B8EA6E6000EBBB8 /* ToiletFinderUI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderUI.docc; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		CF6125222BA0D337007E6326 /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
+				CF61252B2BA2084B007E6326 /* TLTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF61252C2BA2084B007E6326 /* TLTextField.swift in Sources */,
 				CF78D2C42B8EA6E6000EBBB8 /* ToiletFinderUI.docc in Sources */,
 				CF6125212BA0CC08007E6326 /* TFTitleLabel.swift in Sources */,
 			);

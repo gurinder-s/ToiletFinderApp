@@ -13,8 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        //Mark FIREBASE
-        FirebaseApp.configure()
+        
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
                 window = UIWindow(frame: windowScene.coordinateSpace.bounds)
@@ -27,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createTabbar() -> UITabBarController{
         let tabbar = UITabBarController()
         UITabBar.appearance().tintColor = .systemBlue
-        tabbar.viewControllers = [createMapViewNavigationController(),createFavouritesNavigationController()]
+        tabbar.viewControllers = [createLoginNavigationController(),createMapViewNavigationController(),createFavouritesNavigationController()]
         return tabbar
     }
     
@@ -44,6 +43,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         viewController.title = "Favourites"
         //TODO: Change to a SF Symbol
         viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        return UINavigationController(rootViewController: viewController)
+    }
+    
+    func createLoginNavigationController() -> UINavigationController{
+        let viewController = LoginUserViewController()
+        viewController.title = "Login"
         return UINavigationController(rootViewController: viewController)
     }
     func configureNavigationBar(){

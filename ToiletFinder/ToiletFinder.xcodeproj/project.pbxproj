@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF005E752B9FA0E7005E4BCB /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF005E742B9FA0E7005E4BCB /* RegistrationView.swift */; };
 		CF1EBCDF2B8FA2CA008B5BBB /* ToiletMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBCDE2B8FA2CA008B5BBB /* ToiletMapViewController.swift */; };
 		CF1EBCE12B8FA2E5008B5BBB /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBCE02B8FA2E5008B5BBB /* FavouritesViewController.swift */; };
 		CF1EBCE42B8FB5A1008B5BBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF1EBCE32B8FB5A1008B5BBB /* GoogleService-Info.plist */; };
@@ -40,6 +39,10 @@
 		CF1EBD522B8FB938008B5BBB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CF1EBD512B8FB938008B5BBB /* FirebaseStorageCombine-Community */; };
 		CF1EBD9F2B8FCCD4008B5BBB /* ToiletFinderServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */; };
 		CF1EBDA02B8FCCD4008B5BBB /* ToiletFinderServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF6125242BA1F898007E6326 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125232BA1F898007E6326 /* ForgotPasswordViewController.swift */; };
+		CF6125262BA1F8A7007E6326 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125252BA1F8A7007E6326 /* RegisterUserViewController.swift */; };
+		CF6125282BA1F8B6007E6326 /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125272BA1F8B6007E6326 /* LoginUserViewController.swift */; };
+		CF61252A2BA1F9CB007E6326 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6125292BA1F9CB007E6326 /* AuthHeaderView.swift */; };
 		CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */; };
 		CF78D29F2B8EA250000EBBB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */; };
 		CF78D2A62B8EA251000EBBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF78D2A52B8EA251000EBBB8 /* Assets.xcassets */; };
@@ -67,11 +70,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CF005E742B9FA0E7005E4BCB /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CF1EBCDE2B8FA2CA008B5BBB /* ToiletMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletMapViewController.swift; sourceTree = "<group>"; };
 		CF1EBCE02B8FA2E5008B5BBB /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		CF1EBCE32B8FB5A1008B5BBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF1EBD9E2B8FCCD4008B5BBB /* ToiletFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6125232BA1F898007E6326 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CF6125252BA1F8A7007E6326 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		CF6125272BA1F8B6007E6326 /* LoginUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
+		CF6125292BA1F9CB007E6326 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		CF78D2992B8EA250000EBBB8 /* ToiletFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D29C2B8EA250000EBBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF78D29E2B8EA250000EBBB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +174,7 @@
 		CF78D2B12B8EA3D0000EBBB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CF005E742B9FA0E7005E4BCB /* RegistrationView.swift */,
+				CF6125292BA1F9CB007E6326 /* AuthHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +191,9 @@
 			children = (
 				CF1EBCDE2B8FA2CA008B5BBB /* ToiletMapViewController.swift */,
 				CF1EBCE02B8FA2E5008B5BBB /* FavouritesViewController.swift */,
+				CF6125232BA1F898007E6326 /* ForgotPasswordViewController.swift */,
+				CF6125252BA1F8A7007E6326 /* RegisterUserViewController.swift */,
+				CF6125272BA1F8B6007E6326 /* LoginUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 			files = (
 				CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */,
 				CF1EBCDF2B8FA2CA008B5BBB /* ToiletMapViewController.swift in Sources */,
-				CF005E752B9FA0E7005E4BCB /* RegistrationView.swift in Sources */,
+				CF6125242BA1F898007E6326 /* ForgotPasswordViewController.swift in Sources */,
+				CF6125262BA1F8A7007E6326 /* RegisterUserViewController.swift in Sources */,
 				CF1EBCE12B8FA2E5008B5BBB /* FavouritesViewController.swift in Sources */,
+				CF61252A2BA1F9CB007E6326 /* AuthHeaderView.swift in Sources */,
 				CF78D29F2B8EA250000EBBB8 /* SceneDelegate.swift in Sources */,
+				CF6125282BA1F8B6007E6326 /* LoginUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
