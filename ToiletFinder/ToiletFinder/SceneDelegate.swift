@@ -10,7 +10,8 @@ import Firebase
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    //TEmp
+    var isSignedIn: Bool = false
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -18,15 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
                 window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                 window?.windowScene = windowScene
-                window?.rootViewController = createTabbar()
+        
+        //TO DO: Handle signed in status maybe via userservice
+        if isSignedIn{
+            window?.rootViewController = createTabbar()
+        }else{
+            window?.rootViewController = createLoginNavigationController()
+        }
                 window?.makeKeyAndVisible()
                 configureNavigationBar()
     }
     
-    func createTabbar() -> UITabBarController{
+public func createTabbar() -> UITabBarController{
         let tabbar = UITabBarController()
         UITabBar.appearance().tintColor = .systemBlue
-        tabbar.viewControllers = [createLoginNavigationController(),createMapViewNavigationController(),createFavouritesNavigationController()]
+        tabbar.viewControllers = [createMapViewNavigationController(),createFavouritesNavigationController()]
         return tabbar
     }
     

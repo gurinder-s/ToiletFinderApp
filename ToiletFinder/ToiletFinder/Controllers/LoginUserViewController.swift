@@ -89,13 +89,17 @@ class LoginUserViewController: UIViewController {
     
     // MARK - Selectors
     @objc private func didTapSignIn(){
-        
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.window?.rootViewController = sceneDelegate.createTabbar()
+            }
     }
     @objc private func didTapNewUser(){
-        
+        let viewController = RegisterUserViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     @objc private func didTapForgotPassword(){
-        
+        let viewController = ForgotPasswordViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
     
