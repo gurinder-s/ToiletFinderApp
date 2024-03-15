@@ -12,6 +12,7 @@
 		CF78D2EE2B8EA712000EBBB8 /* ToiletFinderDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D2E32B8EA712000EBBB8 /* ToiletFinderDomain.framework */; };
 		CF78D2F32B8EA712000EBBB8 /* ToiletFinderDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78D2F22B8EA712000EBBB8 /* ToiletFinderDomainTests.swift */; };
 		CF78D2F42B8EA712000EBBB8 /* ToiletFinderDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = CF78D2E62B8EA712000EBBB8 /* ToiletFinderDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFF696492BA4A7570046837A /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF696482BA4A7570046837A /* RegisterUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		CF78D2E72B8EA712000EBBB8 /* ToiletFinderDomain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ToiletFinderDomain.docc; sourceTree = "<group>"; };
 		CF78D2ED2B8EA712000EBBB8 /* ToiletFinderDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToiletFinderDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D2F22B8EA712000EBBB8 /* ToiletFinderDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletFinderDomainTests.swift; sourceTree = "<group>"; };
+		CFF696482BA4A7570046837A /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1EBD542B8FC3CB008B5BBB /* UserModel.swift */,
+				CFF696482BA4A7570046837A /* RegisterUserRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF696492BA4A7570046837A /* RegisterUserRequest.swift in Sources */,
 				CF1EBD552B8FC3CB008B5BBB /* UserModel.swift in Sources */,
 				CF78D2E82B8EA712000EBBB8 /* ToiletFinderDomain.docc in Sources */,
 			);

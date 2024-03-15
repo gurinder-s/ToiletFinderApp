@@ -30,8 +30,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 window?.makeKeyAndVisible()
                 configureNavigationBar()
         
-        let userRequest = UserModel.init(uid: <#T##String#>, email: <#T##String#>, displayName: <#T##String#>, username: <#T##String#>, password: <#T##String#>)
-        FirebaseUserService.shared.registerUser(with: <#T##UserModel#>, completion: <#T##(Bool, Error?) -> Void#>)
+        let userRequest = RegisterUserRequest(_username: "Gurinders", _email: "graphiczz8@gmail.com", _password: "password123")
+        FirebaseUserService.shared.registerUser(with: userRequest){
+            wasRegistered, error in if let error = error{
+                print(error.localizedDescription)
+                return
+            }
+            print("Was Registered", wasRegistered)
+        }
         
     }
     

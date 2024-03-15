@@ -20,7 +20,7 @@ public class FirebaseUserService{
     ///   - completion: A completion with two values
     ///   - Bool: was registered - determins if the user was registered and saved in the database correctly
     ///   - Error: an optional error if firebase provides
-    public func registerUser(with userRequest: UserModel, completion: @escaping (Bool, Error?) -> Void){
+    public func registerUser(with userRequest: RegisterUserRequest, completion: @escaping (Bool, Error?) -> Void){
         let username = userRequest.username
         let email = userRequest.email
         let password = userRequest.password
