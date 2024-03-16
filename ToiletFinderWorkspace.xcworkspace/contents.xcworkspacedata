@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
       location = "group:ToiletFinderDomain/ToiletFinderDomain.xcodeproj">
    </FileRef>
    <FileRef
@@ -15,5 +18,8 @@
    </FileRef>
    <FileRef
       location = "group:ToiletFinder/ToiletFinder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
