@@ -26,6 +26,7 @@
 		CF78D3282B8EA7E8000EBBB8 /* ToiletFinderDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF78D3292B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */; };
 		CF78D32A2B8EA7E8000EBBB8 /* ToiletFinderUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFF697522BA607FA0046837A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF697512BA607FA0046837A /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		CF78D3222B8EA7E8000EBBB8 /* ToilerFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToilerFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D3232B8EA7E8000EBBB8 /* ToiletFinderDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF78D3242B8EA7E8000EBBB8 /* ToiletFinderUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF697512BA607FA0046837A /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		DFFC7DEB274982DD5100BB86 /* Pods-ToiletFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletFinder.release.xcconfig"; path = "Target Support Files/Pods-ToiletFinder/Pods-ToiletFinder.release.xcconfig"; sourceTree = "<group>"; };
 		E49450766AC873CC60C5B807 /* Pods-ToiletFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletFinder.debug.xcconfig"; path = "Target Support Files/Pods-ToiletFinder/Pods-ToiletFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6125312BA23C5D007E6326 /* AlertManager.swift */,
+				CFF697512BA607FA0046837A /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				CF78D29D2B8EA250000EBBB8 /* AppDelegate.swift in Sources */,
 				CF1EBCDF2B8FA2CA008B5BBB /* ToiletMapViewController.swift in Sources */,
+				CFF697522BA607FA0046837A /* Validator.swift in Sources */,
 				CF6125242BA1F898007E6326 /* ForgotPasswordViewController.swift in Sources */,
 				CF6125262BA1F8A7007E6326 /* RegisterUserViewController.swift in Sources */,
 				CF1EBCE12B8FA2E5008B5BBB /* FavouritesViewController.swift in Sources */,

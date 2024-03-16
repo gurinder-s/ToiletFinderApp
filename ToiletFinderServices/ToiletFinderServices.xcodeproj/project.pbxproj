@@ -16,6 +16,8 @@
 		CF1EBDA62B8FCF6B008B5BBB /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */; };
 		CFF696552BA4BDAF0046837A /* ToiletFinderDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF696542BA4BDAF0046837A /* ToiletFinderDomain.framework */; };
 		CFF696562BA4BDAF0046837A /* ToiletFinderDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFF696542BA4BDAF0046837A /* ToiletFinderDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFF697542BA61EEE0046837A /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF697532BA61EEE0046837A /* AuthenticationServiceProtocol.swift */; };
+		CFF697562BA61F600046837A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF697552BA61F600046837A /* AuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		CFF696542BA4BDAF0046837A /* ToiletFinderDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToiletFinderDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF697532BA61EEE0046837A /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
+		CFF697552BA61F600046837A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		D6820940D34FA23D1F7B08F6 /* Pods_ToiletFinderServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToiletFinderServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E5DF02C92B71B88988AD /* Pods-ToiletFinderServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToiletFinderServices.debug.xcconfig"; path = "Target Support Files/Pods-ToiletFinderServices/Pods-ToiletFinderServices.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +142,8 @@
 			children = (
 				CF1EBDA32B8FCF32008B5BBB /* UserServiceProtocol.swift */,
 				CF1EBDA52B8FCF6B008B5BBB /* FirebaseUserService.swift */,
+				CFF697532BA61EEE0046837A /* AuthenticationServiceProtocol.swift */,
+				CFF697552BA61F600046837A /* AuthenticationService.swift */,
 			);
 			path = UserService;
 			sourceTree = "<group>";
@@ -288,8 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1EBDA62B8FCF6B008B5BBB /* FirebaseUserService.swift in Sources */,
+				CFF697542BA61EEE0046837A /* AuthenticationServiceProtocol.swift in Sources */,
 				CF1EBDA42B8FCF32008B5BBB /* UserServiceProtocol.swift in Sources */,
 				CF1EBD892B8FCBCC008B5BBB /* ToiletFinderServices.docc in Sources */,
+				CFF697562BA61F600046837A /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

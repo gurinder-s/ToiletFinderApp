@@ -7,6 +7,8 @@
 
 import UIKit
 import ToiletFinderUI
+import ToiletFinderDomain
+import ToiletFinderServices
 class RegisterUserViewController: UIViewController {
     
     // MARK - UI Components
@@ -110,6 +112,35 @@ class RegisterUserViewController: UIViewController {
     
     // MARK - Selectors
     @objc private func didTapSignUp(){
+        let registerUserRequest = RegisterUserRequest(_username: self.usernameField.text ?? "", _email: self.emailField.text ?? "", _password: self.passwordField.text ?? "")
+        
+        if !Validator.isValidUsername(for: registerUserRequest.username){
+            AlertManager.showInvalidUsernameAlert(on: self)
+            return
+        }
+        if !Validator.isValidEmail(for: registerUserRequest.email){
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        if !Validator.isPasswordValid(for: registerUserRequest.password){
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        FirebaseUserService.shared.registerUser(with: registerUserRequest){ [weak self]
+            wasRegistered, error in
+            guard let self = self else {return} // something to do with cycles check
+            if let error = error {
+                AlertManager.showRegistrationErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if wasRegistered{
+                print("ok this wasregistered was hit")
+            }else{
+                AlertManager.showRegistrationErrorAlert(on: self)
+            }
+        }
         
     }
     @objc private func didTapSignIn(){

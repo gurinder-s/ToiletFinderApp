@@ -8,39 +8,24 @@
 import UIKit
 import ToiletFinderServices
 import ToiletFinderDomain
+import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    //TEmp
-    var isSignedIn: Bool = false
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        self.setupWindow(with: scene)
+        configureRootViewControllerBasedOnAuthState()
+        configureNavigationBar()
         
-        
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-                window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-                window?.windowScene = windowScene
-        
-        //TO DO: Handle signed in status maybe via userservice
-        if isSignedIn{
-            window?.rootViewController = createTabbar()
-        }else{
-            window?.rootViewController = createLoginNavigationController()
-        }
-                window?.makeKeyAndVisible()
-                configureNavigationBar()
-        
-        let userRequest = RegisterUserRequest(_username: "Gurinders", _email: "graphiczz8@gmail.com", _password: "password123")
-        FirebaseUserService.shared.registerUser(with: userRequest){
-            wasRegistered, error in if let error = error{
-                print(error.localizedDescription)
-                return
-            }
-            print("Was Registered", wasRegistered)
-        }
         
     }
-    
+    public func setupWindow(with scene: UIScene){
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+            window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+            window?.windowScene = windowScene
+            window?.makeKeyAndVisible()
+    }
 public func createTabbar() -> UITabBarController{
         let tabbar = UITabBarController()
         UITabBar.appearance().tintColor = .systemBlue
@@ -81,9 +66,20 @@ public func createTabbar() -> UITabBarController{
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        AuthenticationService.shared.verifyCurrentUser { [weak self] (isValidUser, _) in
+            DispatchQueue.main.async {
+                if isValidUser {
+                    print("User is valid and signed in.")
+                    // Keep the user on the current screen or update the view as needed.
+                } else {
+                    print("No valid user is signed in. Directing to login screen.")
+                    self?.window?.rootViewController = self?.createLoginNavigationController()
+                    self?.window?.makeKeyAndVisible()
+                }
+            }
+        }
     }
+
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
@@ -99,6 +95,36 @@ public func createTabbar() -> UITabBarController{
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    private func configureRootViewControllerBasedOnAuthState() {
+        
+            AuthenticationService.shared.addAuthStateListener { [weak self] user in
+                guard let self = self else { return }
+                
+                DispatchQueue.main.async {
+                    if let _ = user {
+                        // User is signed in
+                        print("User is signed in")
+                        self.window?.rootViewController = self.createTabbar()
+                    } else {
+                        // No user is signed in
+                        print("No user is signed in.")
+                        self.window?.rootViewController = self.createLoginNavigationController()
+                    }
+                    self.window?.makeKeyAndVisible()
+                }
+            }
+        }
+
+    
+    public func checkAuthentication(){
+        print(Auth.auth().currentUser)
+        if Auth.auth().currentUser == nil{
+            self.window?.rootViewController = createLoginNavigationController()
+        }else{
+            self.window?.rootViewController = createTabbar()
+        }
     }
 
 
