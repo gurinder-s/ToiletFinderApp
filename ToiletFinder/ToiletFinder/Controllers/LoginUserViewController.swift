@@ -7,6 +7,8 @@
 
 import UIKit
 import ToiletFinderUI
+import ToiletFinderDomain
+import ToiletFinderServices
 class LoginUserViewController: UIViewController {
     
     // MARK - UI Components
@@ -91,9 +93,26 @@ class LoginUserViewController: UIViewController {
     
     // MARK - Selectors
     @objc private func didTapSignIn(){
-        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
-                sceneDelegate.window?.rootViewController = sceneDelegate.createTabbar()
+        let loginUserRequest = LoginUserRequest(_email: self.emailField.text ?? "", _password: self.passwordField.text ?? "")
+        
+        if !Validator.isValidEmail(for: loginUserRequest.email){
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        if !Validator.isPasswordValid(for: loginUserRequest.password){
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        FirebaseUserService.shared.signIn(with: loginUserRequest) { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                AlertManager.showSignInErrorAlert(on: self, with: error)
+                return
             }
+        }
+        
+        
     }
     @objc private func didTapNewUser(){
         let viewController = RegisterUserViewController()
