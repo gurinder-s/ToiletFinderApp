@@ -7,6 +7,7 @@
 
 import UIKit
 import ToiletFinderUI
+import ToiletFinderServices
 class ForgotPasswordViewController: UIViewController {
     // MARK: - Variables
     // MARK: - UI Components
@@ -60,8 +61,22 @@ class ForgotPasswordViewController: UIViewController {
     // MARK: - Selectors
     
     @objc private func didTapForgotPassword(){
-        guard let email = self.emailField.text, !email.isEmpty else {return}
+        
         // TODO: - Email verification 
+        let email = self.emailField.text ?? ""
+        
+        if !Validator.isValidEmail(for: email){
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        FirebaseUserService.shared.forgotPassword(with: email) { [weak self] error in guard let self = self else {return}
+            if let error = error{
+                AlertManager.showErrorSendingPasswordResetAlert(on: self, with: error)
+                return
+            }
+            AlertManager.showPasswordResetSentAlert(on: self)
+        }
     }
     
 
