@@ -1,106 +1,93 @@
 import UIKit
 import CoreLocation
 
-/// A view controller that presents a map and a list of toilets.
 class ToiletMapViewController: UIViewController {
     
     // MARK: - Properties
-    
-    private var mapView: MapView!
-    private var toiletTableListView: ToiletTableListView!
-    let locationManager = CLLocationManager()
+    private var mapView: MapView! // Assuming MapView is a custom class that encapsulates MKMapView
+    private var toiletTableListView: ToiletTableListView! // Assuming this is a custom UIView
+    private let locationManager = CLLocationManager()
+
     // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         setupUI()
-        setupLocationManager()
-        
+        configureLocationManager()
     }
     
-    // MARK: - Setup
-    
-    /// Configures the view controller's initial settings.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.showUserLocation(true)// This assumes your custom MapView class has a property or method that effectively makes this call on its MKMapView instance.
+    }
+
+    // MARK: - Setup ViewController and UI
     private func configureViewController() {
-        // Setting the background color to the system's default background color
         view.backgroundColor = .systemBackground
     }
     
-    /// Sets up and lays out the UI components on the screen.
     private func setupUI() {
-        initializeComponents()
-        layoutComponents()
-    }
-    
-    /// Initializes the UI components.
-    private func initializeComponents() {
         mapView = MapView()
         toiletTableListView = ToiletTableListView()
         
-        // Disabling autoresizing mask constraints for programmatic Auto Layout
         mapView.translatesAutoresizingMaskIntoConstraints = false
         toiletTableListView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Adding subviews to the view's hierarchy
         view.addSubview(mapView)
         view.addSubview(toiletTableListView)
+        
+        layoutComponents()
     }
     
-    /// Lays out the UI components using Auto Layout constraints.
     private func layoutComponents() {
         NSLayoutConstraint.activate([
-            // MapView constraints
             mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            mapView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mapView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             
-            // ToiletTableListView constraints
             toiletTableListView.topAnchor.constraint(equalTo: mapView.bottomAnchor),
-            toiletTableListView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            toiletTableListView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            toiletTableListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            toiletTableListView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            toiletTableListView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            toiletTableListView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
-    func setupLocationManager(){
+    // MARK: - Location Manager Configuration and Authorization
+    private func configureLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
     }
-   
     
-    
- 
-    
-    
+    private func checkLocationAuthorizationStatus() {
+        if CLLocationManager.locationServicesEnabled() {
+            switch locationManager.authorizationStatus {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .authorizedWhenInUse, .authorizedAlways:
+                locationManager.startUpdatingLocation()
+                
+            default:
+                mapView.showUserLocation(false)
+            }
+        }
+    }
 }
 
-extension ToiletMapViewController: CLLocationManagerDelegate{
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        // TODO:
-    }
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
-        // TODO:
+// MARK: - CLLocationManagerDelegate
+extension ToiletMapViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.mapView.centerToLocation(location)
+        }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        switch manager.authorizationStatus {
-        case .authorizedWhenInUse, .authorizedAlways:
-            setupLocationManager()
-            mapView.showUserLocation(true)
-            break
-        case .denied, .restricted:
-            // Location services are not authorized; show an alert or guide the user to settings
-            mapView.showUserLocation(false)
-            break
-        case .notDetermined:
-            // Request authorization
-            manager.requestWhenInUseAuthorization()
-            break
-        default:
-            break
+        DispatchQueue.main.async { [weak self] in
+            self?.checkLocationAuthorizationStatus()
         }
     }
 }

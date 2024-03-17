@@ -1,14 +1,9 @@
 import UIKit
 import MapKit
 
-/// A custom view that contains a map view.
 class MapView: UIView {
     
-    // MARK: - Properties
-    
     private var mapView: MKMapView!
-    
-    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,30 +15,28 @@ class MapView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Configuration
-    
-    /// Configures the view's initial settings.
     private func configureView() {
-        // Setting the background color to the system's default background color
-        self.backgroundColor = .systemBackground
+        backgroundColor = .systemBackground
     }
     
-    /// Sets up and configures the map view.
     private func setupMapView() {
         mapView = MKMapView()
-        
-        // Disabling autoresizing mask constraints for programmatic Auto Layout
         mapView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(mapView)
-        
         layoutMapView()
     }
-   
-    func showUserLocation(_ show: Bool) {
+    
+    public func showUserLocation(_ show: Bool) {
         mapView.showsUserLocation = show
     }
-
-    /// Lays out the map view using Auto Layout constraints.
+    
+    func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius,
+                                                  longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
     private func layoutMapView() {
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
