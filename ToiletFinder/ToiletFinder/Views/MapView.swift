@@ -29,7 +29,12 @@ class MapView: UIView {
     public func showUserLocation(_ show: Bool) {
         mapView.showsUserLocation = show
     }
-    
+    func centerToLocation(_ manager: CLLocationManager){
+        if let location = manager.location?.coordinate{
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
+            mapView.setRegion(region, animated: true)
+        }
+    }
     func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius,
