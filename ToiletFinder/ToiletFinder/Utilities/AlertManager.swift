@@ -91,6 +91,16 @@ extension AlertManager{
     public static func showFetchingUserErrorAlert(on vc:UIViewController, with error: Error){
         self.showBasicAlert(on: vc, with: "Error Fetching User", and: "\(error.localizedDescription)")
     }
-        
+    
+    
    
+}
+
+// MARK: - Logout Errors
+extension AlertManager {
+    
+    public static func showLogoutError(on vc: UIViewController, with error: Error) {
+        self.showBasicAlert(on: vc, with: "Log Out Error", and: "\(error.localizedDescription)")
+        
+    }
 }

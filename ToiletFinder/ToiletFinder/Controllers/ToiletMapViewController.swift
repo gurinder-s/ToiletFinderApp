@@ -78,7 +78,7 @@ class ToiletMapViewController: UIViewController {
 extension ToiletMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-       // mapView.centerToLocation(location)
+        //mapView.centerToLocation(location)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

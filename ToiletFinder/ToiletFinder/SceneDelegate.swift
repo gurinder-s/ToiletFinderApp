@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: - View Controller Creation
     private func createTabbar() -> UITabBarController {
         let tabbar = UITabBarController()
-        tabbar.viewControllers = [createMapViewNavigationController(), createFavouritesNavigationController()]
+        tabbar.viewControllers = [createMapViewNavigationController(), createFavouritesNavigationController(), createProfileNavigationController()]
         return tabbar
     }
     
@@ -60,6 +60,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func createLoginNavigationController() -> UINavigationController {
         let viewController = LoginUserViewController() // Ensure this is properly initialized
         viewController.title = "Login"
+        return UINavigationController(rootViewController: viewController)
+    }
+    
+    private func createProfileNavigationController() -> UINavigationController {
+        let viewController = ProfileViewController() // Ensure this is properly initialized
+        viewController.title = "Profile"
+        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
         return UINavigationController(rootViewController: viewController)
     }
     
