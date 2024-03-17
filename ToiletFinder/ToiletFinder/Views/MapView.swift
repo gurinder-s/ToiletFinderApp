@@ -38,7 +38,11 @@ class MapView: UIView {
         
         layoutMapView()
     }
-    
+   
+    func showUserLocation(_ show: Bool) {
+        mapView.showsUserLocation = show
+    }
+
     /// Lays out the map view using Auto Layout constraints.
     private func layoutMapView() {
         NSLayoutConstraint.activate([

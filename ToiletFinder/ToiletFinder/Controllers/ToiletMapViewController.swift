@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 /// A view controller that presents a map and a list of toilets.
 class ToiletMapViewController: UIViewController {
@@ -7,13 +8,15 @@ class ToiletMapViewController: UIViewController {
     
     private var mapView: MapView!
     private var toiletTableListView: ToiletTableListView!
-    
+    let locationManager = CLLocationManager()
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         setupUI()
+        setupLocationManager()
+        
     }
     
     // MARK: - Setup
@@ -59,5 +62,45 @@ class ToiletMapViewController: UIViewController {
             toiletTableListView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             toiletTableListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    func setupLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+    }
+   
+    
+    
+ 
+    
+    
+}
+
+extension ToiletMapViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        // TODO:
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
+        // TODO:
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedWhenInUse, .authorizedAlways:
+            setupLocationManager()
+            mapView.showUserLocation(true)
+            break
+        case .denied, .restricted:
+            // Location services are not authorized; show an alert or guide the user to settings
+            mapView.showUserLocation(false)
+            break
+        case .notDetermined:
+            // Request authorization
+            manager.requestWhenInUseAuthorization()
+            break
+        default:
+            break
+        }
     }
 }
